@@ -6,61 +6,15 @@
         xmlns:local="clr-namespace:ExampleWpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="LightPink">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-
-        <TextBlock 
-            TextWrapping="Wrap" 
-            Grid.ColumnSpan="2" 
-            Margin="282,28,118,148" 
-            Grid.Row="1">
-            <Run FontSize="16" Foreground="Black">Логин</Run>
-        </TextBlock>
-
-        <TextBlock 
-            TextWrapping="Wrap" 
-            Grid.ColumnSpan="2" 
-            Margin="282,117,118,59" 
-            Grid.Row="1">
-            <Run FontSize="16" Foreground="Black">Пароль</Run>
-        </TextBlock>
-
-        <StackPanel
-            Grid.Row="1" 
-            Margin="282,49,284,84" Grid.ColumnSpan="2">
-            <Label x:Name="SimpleLb"/>
-            <TextBox x:Name="SimpleTB" Height="43" TextChanged="SimpleTB_TextChanged" RenderTransformOrigin="0.5,0.5">
-                <TextBox.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="0.351"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="-4.957"/>
-                    </TransformGroup>
-                </TextBox.RenderTransform>
-            </TextBox>
+    <Grid Background="Aqua">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="Aqua">
+            <Label Content="Email:"/>
+            <TextBox x:Name="EmailTB" Width="300" Height="25" Margin="5"/>
+            <Label Content="Password:"/>
+            <PasswordBox x:Name="PasswordTB" Width="300" Height="25" Margin="5"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button x:Name="SignInBtn" Margin="5" Content="Войти" Click="SignInBtn_Click" Background="Beige"/>
+            </StackPanel>
         </StackPanel>
-
-        <PasswordBox 
-            Password="171519"
-            Margin="282,139,286,24"
-            Grid.Row="1" Grid.ColumnSpan="2" />
-
-
-        <Button Background="LightCoral"
-            x:Name="SimpleBtn"
-            Grid.Row="2" 
-            Margin="284,27,288,131"
-            Content="Войти" 
-            Click="SimpleBtn_Click" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
